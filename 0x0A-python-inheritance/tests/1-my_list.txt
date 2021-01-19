@@ -1,0 +1,36 @@
+"""
+   This is my test case for 1-my_list module
+"""
+
+"""
+   Importing function MyList from my module
+"""
+>>> MyList = __import__("1-my_list").MyList
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> my_list = MyList([10, 5, 1, 0, 120])
+>>> my_list.print_sorted()
+[0, 1, 5, 10, 120]
+
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
+
+>>> my_list = MyList([50, 2])
+>>> my_list.print_sorted()
+[2, 50]
+
+>>> my_list = MyList(["DEF", "XYZ", "ABC"])
+>>> my_list.print_sorted()
+['ABC', 'DEF', 'XYZ']
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]

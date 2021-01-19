@@ -1,0 +1,37 @@
+"""
+   Test case for the module 7-base_geometry
+"""
+
+"""
+   Importing function BaseGeometry from my module
+"""
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+
+>>> try:
+...      bg.integer_validator("name", "John")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+>>> try:
+...     bg.integer_validator("age", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] age must be greater than 0
+>>> try:
+...     bg.integer_validator("distance", -4)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] distance must be greater than 0
+
+>>> bg.integer_validator(5, "distance")
+Traceback (most recent call last):
+   ...
+TypeError: 5 must be a string
+
+>>> bg.integer_validator(None, None)
+Traceback (most recent call last):
+   ...
+TypeError: None must be a string
