@@ -1,21 +1,20 @@
-# Almost A Circle 
-The AirBnB project is a big part of the Higher level curriculum. This project will help you be ready for it.
+# 0x0C. Python - Almost a circle
 
-### In this project, you will review everything about Python:
+## In this project, we will review:
+- Import
+- Exceptions
+- Class
+- Private attribute
+- Getter/Setter
+- Class method
+- Static method
+- Inheritance
+- Unittest
+- Read/Write file
 
-* Import
-* Exceptions
-* Class
-* Private attribute
-* Getter/Setter
-* Class method
-* Static method
-* Inheritance
-* Unittest
-* Read/Write file
-
-### You will also learn about:
-
-* args and kwargs
-* Serialization/Deserialization
-* JSON
+## General
+- How to serialize and deserialize a Class
+- How to write and read a JSON file
+- What is *args and how to use it
+- What is **kwargs and how to use it
+- How to handle named arguments in a function
