@@ -3,11 +3,9 @@
 from urllib import request
 
 if __name__ == "__main__":
-    url = urllib.request.Request("https://intranet.hbtn.io/status")
-    with urllib.request.urlopen(url) as response:
-        html = response.read()
+    with request.urlopen("https://intranet.hbtn.io/status") as page:
+        content = page.read()
         print("Body response:")
-        print("\t- type:", type(html))
-        print("\t- content:", html)
-        print("\t- utf8 content:", html.decode('ascii'))
-        
+        print("\t- type: {}".format(type(content)))
+        print("\t- content: {}".format(content))
+        print("\t- utf8 content: {}".format(content.decode('utf-8')))
